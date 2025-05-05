@@ -1,0 +1,589 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --mickeyCor: #FDD8C5;
+   --mickeySegundaCor: #000;
+   --mickeyPalpebraCor: #fdcab0;
+   --background: #fff;
+   --furoQueijoCor: #fcd248;
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   width: 100vw;
+}
+
+#centro {
+   position: relative;
+   display: flex;
+   align-items: center;
+
+   #mickeyMouse {
+      z-index: 5;
+      background-color: var(--background);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #mickeyMouseCorpo {
+         position: relative;
+
+         #baseDoRosto {
+            z-index: 3;
+            width: 250px;
+            height: 250px;
+            background-color: var(--mickeySegundaCor);
+            border-radius: 50%;
+
+            #baseDoOlhoEsq {
+               z-index: 4;
+               height: 180px;
+               width: 95px;
+               border-radius: 50%;
+               background-color: var(--mickeyCor);
+               position: absolute;
+               left: 40px;
+               top: 20px;
+
+               #palpebraDeCimaEsq {
+                  z-index: 8;
+                  animation: palpebraDeCima 4s infinite;
+                  width: 35px;
+                  height: 0;
+                  background-color: var(--mickeyPalpebraCor);
+                  position: absolute;
+                  top: 0px;
+                  right: 0px;
+                  animation-fill-mode: both;
+               }
+
+               #palpebraDeBaixoEsq {
+                  z-index: 8;
+                  animation: palpebraDeBaixo 4s infinite;
+                  width: 35px;
+                  height: 0;
+                  background-color: var(--mickeyPalpebraCor);
+                  position: absolute;
+                  bottom: 0px;
+                  right: 0px;
+                  animation-fill-mode: both;
+               }
+
+               #olhoEsq {
+                  z-index: 5;
+                  width: 30px;
+                  height: 80px;
+                  background-color: rgb(255, 255, 255);
+                  border-radius: 50%;
+                  position: absolute;
+                  top: 33px;
+                  right: 20px;
+                  overflow: hidden;
+
+                  #pupilaEsq {
+                     z-index: 6;
+                     width: 15px;
+                     height: 42px;
+                     background-color: var(--mickeySegundaCor);
+                     border-radius: 50%;
+                     position: absolute;
+                     top: 35px;
+                     right: 8px;
+
+                     #irisEsq {
+                        width: 4px;
+                        height: 4px;
+                        background-color: rgb(245, 245, 245);
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 8px;
+                        left: 6px;
+                     }
+                  }
+               }
+            }
+
+            #baseDoOlhoDir {
+               z-index: 4;
+               height: 180px;
+               width: 95px;
+               border-radius: 50%;
+               background-color: var(--mickeyCor);
+               position: absolute;
+               right: 40px;
+               top: 20px;
+
+               #palpebraDeCimaDir {
+                  z-index: 8;
+                  animation: palpebraDeCima 4s infinite;
+                  width: 35px;
+                  height: 0;
+                  background-color: var(--mickeyPalpebraCor);
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
+                  animation-fill-mode: both;
+               }
+
+               #palpebraDeBaixoDir {
+                  z-index: 8;
+                  animation: palpebraDeBaixo 4s infinite;
+                  width: 35px;
+                  height: 0;
+                  background-color: var(--mickeyPalpebraCor);
+                  position: absolute;
+                  bottom: 0px;
+                  left: 0px;
+                  animation-fill-mode: both;
+               }
+
+               #olhoDir {
+                  z-index: 5;
+                  width: 30px;
+                  height: 80px;
+                  background-color: rgb(255, 255, 255);
+                  border-radius: 50%;
+                  position: absolute;
+                  top: 33px;
+                  left: 20px;
+                  overflow: hidden;
+
+                  #pupilaDir {
+                     z-index: 6;
+                     width: 15px;
+                     height: 42px;
+                     background-color: var(--mickeySegundaCor);
+                     border-radius: 50%;
+                     position: absolute;
+                     top: 35px;
+                     left: 8px;
+
+                     #irisDir {
+                        width: 4px;
+                        height: 4px;
+                        background-color: rgb(245, 245, 245);
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 8px;
+                        right: 6px;
+                     }
+                  }
+               }
+            }
+
+            #continuaBoca {
+               z-index: 4;
+               width: 140px;
+               height: 140px;
+               background-color: var(--mickeyCor);
+               position: absolute;
+               border-radius: 50%;
+               left: 50%;
+               top: 120px;
+               transform: translatex(-50%);
+            }
+
+            #baseDaBoca {
+               z-index: 4;
+               width: 230px;
+               height: 130px;
+               background-color: var(--mickeyCor);
+               border-radius: 50%;
+               position: absolute;
+               bottom: 0px;
+               left: 50%;
+               transform: translatex(-50%);
+               overflow: hidden;
+
+               #nariz {
+                  z-index: 7;
+                  width: 65px;
+                  height: 45px;
+                  background-color: var(--mickeySegundaCor);
+                  border-radius: 50%;
+                  position: absolute;
+                  top: 10px;
+                  left: 50%;
+                  transform: translatex(-50%);
+                  cursor: grab;
+
+                  #pontoLuz {
+                     z-index: 7;
+                     width: 16px;
+                     height: 8px;
+                     background-color: rgb(255, 255, 255);
+                     filter: blur(1px);
+                     border-radius: 50%;
+                     position: absolute;
+                     top: 7px;
+                     left: 15px;
+                  }
+
+               }
+
+               #nariz.anima-nariz {
+                  animation: animacaonariz 600ms;
+                  cursor: grabbing;
+               }
+
+               #boca {
+                  z-index: 6;
+                  width: 270px;
+                  height: 200px;
+                  background-color: var(--mickeyCor);
+                  box-shadow: 0px 3px 0px 0px #b67251;
+                  border-radius: 50%;
+                  position: absolute;
+                  bottom: 50px;
+                  left: 50%;
+                  transform: translatex(-50%);
+               }
+
+               #buracoDaBoca {
+                  z-index: 5;
+                  width: 110px;
+                  height: 150px;
+                  background-color: #541418;
+                  position: absolute;
+                  border-radius: 50%;
+                  left: 50%;
+                  bottom: 10px;
+                  transform: translatex(-50%);
+                  overflow: hidden;
+
+                  #primeiraParteLingua {
+                     z-index: 7;
+                     width: 50px;
+                     height: 40px;
+                     background-color: #ffc0cb;
+                     box-shadow: 1px -1px 0px 0px rgb(243, 130, 149);
+                     position: absolute;
+                     border-radius: 50%;
+                     bottom: -15px;
+                     left: 12px;
+                  }
+
+                  #segundaParteLingua {
+                     z-index: 6;
+                     width: 50px;
+                     height: 40px;
+                     background-color: #ffc0cb;
+                     position: absolute;
+                     border-radius: 50%;
+                     bottom: -15px;
+                     right: 30px;
+                  }
+
+                  #detalheLingua {
+                     z-index: 8;
+                     width: 15px;
+                     height: 15px;
+                     background-color: #ffc0cb;
+                     position: absolute;
+                     bottom: 0px;
+                     right: 40px;
+                  }
+               }
+
+               #detalheBocaEsq {
+                  z-index: 8;
+                  background-color: #b67251;
+                  position: absolute;
+                  width: 30px;
+                  height: 6px;
+                  border-radius: 50%;
+                  top: 55px;
+                  left: 15px;
+                  rotate: -30deg;
+               }
+
+               #detalheBocaDir {
+                  z-index: 8;
+                  background-color: #b67251;
+                  position: absolute;
+                  width: 30px;
+                  height: 6px;
+                  border-radius: 50%;
+                  top: 55px;
+                  right: 15px;
+                  rotate: 30deg;
+               }
+
+               #primeiroRecorteDaBoca {
+                  z-index: 7;
+                  width: 30px;
+                  height: 30px;
+                  position: absolute;
+                  background-color: var(--mickeyCor);
+                  border-radius: 50%;
+                  top: 35px;
+                  left: 5px;
+               }
+
+               #segundoRecorteDaBoca {
+                  z-index: 7;
+                  width: 30px;
+                  height: 30px;
+                  position: absolute;
+                  background-color: var(--mickeyCor);
+                  border-radius: 50%;
+                  top: 35px;
+                  right: 5px;
+               }
+            }
+         }
+
+         #orelhaEsq {
+            z-index: 3;
+            width: 150px;
+            height: 150px;
+            background-color: var(--mickeySegundaCor);
+            border-radius: 50%;
+            position: absolute;
+            top: -70px;
+            left: -70px;
+         }
+
+         #orelhaDir {
+            z-index: 3;
+            width: 150px;
+            height: 150px;
+            background-color: var(--mickeySegundaCor);
+            border-radius: 50%;
+            position: absolute;
+            top: -70px;
+            right: -70px;
+         }
+      }
+   }
+
+   #queijoContainer {
+      display: none;
+
+      .queijo {
+         cursor: pointer;
+      }
+
+      #massaDoQueijo {
+         z-index: 4;
+         --p: 168px;
+         width: 270px;
+         aspect-ratio: 8/10;
+         clip-path: polygon(0 var(--p), 0 100%, 100% calc(100% - var(--p)), 100% 0);
+         background: #ffe44a;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      #cascaDoQueijo {
+         z-index: 1;
+         width: 800px;
+         height: 450px;
+
+         background: rgb(255, 190, 69);
+         border-radius: 400px / 225px;
+
+         position: absolute;
+         top: -183px;
+         right: -395px;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      #primeiroRecorte {
+         z-index: 2;
+         width: 1000px;
+         height: 270px;
+
+         background-color: var(--background);
+
+         position: absolute;
+         top: -1px;
+         right: -400px;
+      }
+
+      #segundoRecorte {
+         z-index: 2;
+         width: 260px;
+         height: 170px;
+
+         background-color: var(--background);
+
+         position: absolute;
+         top: -170px;
+         right: -395px;
+      }
+
+      #terceiroRecorte {
+         z-index: 2;
+         width: 420px;
+         height: 240px;
+
+         background-color: var(--background);
+
+         position: absolute;
+         top: -240px;
+         right: 92px;
+         transform: skew(-20deg);
+      }
+
+      #primeiraSombra {
+         z-index: 3;
+         width: 220px;
+         height: 170px;
+
+         background-color: rgba(0, 0, 0, 0.22);
+         filter: blur(4px);
+         transform: skew(-58deg);
+
+         position: absolute;
+         top: 0px;
+         right: -218px;
+      }
+
+      #recorteSombra {
+         z-index: 4;
+         width: 320px;
+         height: 70px;
+
+         background-color: var(--background);
+
+         position: absolute;
+         top: 178px;
+         right: -95px;
+      }
+
+      #primeiroFuroDoQueijo {
+         z-index: 5;
+         width: 45px;
+         height: 48px;
+         border-radius: 57% 33%;
+         background-color: var(--furoQueijoCor);
+         box-shadow: 4px 7px 1px 1px rgba(0, 0, 0, 0.384);
+
+         position: absolute;
+         top: -40px;
+         left: -10px;
+      }
+
+      #segundoFuroDoQueijo {
+         z-index: 5;
+         width: 36px;
+         height: 40px;
+         border-radius: 55% 35%;
+         background-color: var(--furoQueijoCor);
+         box-shadow: 3px 5px 1px 1px rgba(0, 0, 0, 0.384);
+
+
+         position: absolute;
+         top: -100px;
+         left: 65px;
+      }
+
+      #terceiroFuroDoQueijo {
+         z-index: 5;
+         width: 20px;
+         height: 24px;
+         border-radius: 57% 33%;
+         background-color: var(--furoQueijoCor);
+         box-shadow: 2px 4px 0px 1px rgba(0, 0, 0, 0.384);
+
+         position: absolute;
+         top: 50px;
+         left: -50px;
+      }
+
+      #quartoFuroDoQueijo {
+         z-index: 5;
+         width: 20px;
+         height: 24px;
+         border-radius: 57% 33%;
+         background-color: var(--furoQueijoCor);
+         box-shadow: 2px 4px 0px 1px rgba(0, 0, 0, 0.384);
+
+         position: absolute;
+         top: 30px;
+         left: -100px;
+      }
+   }
+}
+
+@keyframes animacaonariz {
+   0% {
+      top: 10px;
+      width: 65px;
+      height: 45px;
+   }
+
+   10% {
+      top: 15px;
+      width: 52px;
+      height: 36px;
+   }
+
+   45%,
+   55% {
+      top: 10px;
+      width: 65px;
+      height: 45px;
+   }
+
+   75% {
+      top: 15px;
+      width: 52px;
+      height: 36px;
+   }
+
+   95%,
+   100% {
+      top: 10px;
+      width: 65px;
+      height: 45px;
+   }
+}
+
+@keyframes palpebraDeCima {
+
+   0%,
+   70% {
+      height: 0;
+   }
+
+   80%,
+   90% {
+      height: 52px;
+   }
+
+   100% {
+      height: 0;
+   }
+}
+
+@keyframes palpebraDeBaixo {
+
+   0%,
+   70% {
+      height: 0;
+   }
+
+   80%,
+   90% {
+      height: 32px;
+   }
+
+   100% {
+      height: 0;
+   }
+}
